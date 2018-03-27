@@ -1,0 +1,61 @@
+<html>
+
+  <body>
+    <img id='loader' style="display: none; width: 80px" src="loader.gif"></img>
+
+    Bulk Operation
+    <hr/>
+
+    Select room <select id="room_type"><option value="Single">Single Room</option><option value="Double">Double Room</option></select>
+    <br/>
+    <br/>
+    Select Days
+    <br/>
+    From<input type='text' id='from_date' placeholder='yyyy-mm-dd'>
+    <br/>
+    to<input type='text' id='to_date' placeholder='yyyy-mm-dd'>
+    <br/>
+    <br/>
+    Refine Days
+    <br/>
+    <input type='checkbox' id='all_day'> All Day
+    <input type='checkbox' id='all_weekday'> All Week Days
+    <input type='checkbox' id='all_weekend'> All Weekends
+    <br/>
+    <input type='checkbox' id='all_monday'> All Mondays
+    <input type='checkbox' id='all_tuesday'> All Tuesdays
+    <input type='checkbox' id='all_wednesday'> All Wednesdays
+    <br/>
+    <input type='checkbox' id='all_thursday'> All Thursdays
+    <input type='checkbox' id='all_friday'> All Fridays
+    <input type='checkbox' id='all_saturday'> All Saturdays
+    <br/>
+    <input type='checkbox' id='all_sunday'> All Sundays
+    <br/>
+    <br/>
+    CHANGE PRICE TO<input type='text' id='price'>
+    <br/>
+    CHANGE AVAILABILITY TO<input type='text' id='availability'>
+    <br/>
+    <br/>
+    <button id='cancel-button'>Cancel</button>
+    <button id='update-submit-button' style="background-color: green">Submit</button>
+    <br/>
+    <br/>
+    <hr/>
+    <span id='i-form' style='display:none;border-style: solid;border-width: medium;'><input type='text' class='i-input'><button class='i-update'>update</button><button class='i-cancel'>cancel</button></span>
+    <table id='content' border="1">
+      <caption><a onclick="return false" id='load-more-prev' href='#'><<<</a> <span id='start-date'></span> - <span id='end-date'></span> <a href="#" onclick="return false" id='load-more-next'>>>></a></caption>
+      <tr id='week-day'><th>Price and availability</th></tr>
+      <tr id='day-number'><th></th></tr>
+    </table>
+    <br/>
+    <br/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src='loader.js'></script>
+    <script src='response_formatter.js'></script>
+    <script src='room_details_manager.js'></script>
+    <script src='room_details_update_manager.js'></script>
+    <script src='main.js'></script>
+  </body>
+<html>
